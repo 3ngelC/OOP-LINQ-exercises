@@ -10,30 +10,30 @@ namespace Exercises
 {
     internal class One
     {
-        public static void MyIntStack()
+        public static int[] MyIntStack()
         {
-            int[] contents = new int[100];
+            int[] contents = new int[1];
 
+            return AddValues(contents);
         }
         
         public static int[] AddValues(int[] contents)
         {
             List<int> list = contents.ToList();
-            
-            
+            int value=0;
 
             try
             {
-                ReadValue();
+                value = ReadValue();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
-            {
 
-            }
-            
+            list.Add(value);
+
+            return list.ToArray();
 
         }
 
